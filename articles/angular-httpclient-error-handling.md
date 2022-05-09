@@ -10,7 +10,7 @@ published: false
 今回は[Angular](https://angular.io/)におけるHTTP Clientのエラーハンドリングについてまとめます。  
 Angularではフレームワークとして`HttpClient`クラスが提供されているので利用します。
 
-また、今回のサンプルは[stackblitz](https://stackblitz.com/)で公開しています。
+また、今回のサンプルは[stackblitz](https://stackblitz.com/edit/angular-ivy-w4dtzi?file=src/app/data.service.ts)で公開しています。
 
 https://stackblitz.com/edit/angular-ivy-w4dtzi?file=src/app/data.service.ts
 
