@@ -129,6 +129,7 @@ export class AppComponent implements AfterViewInit {
 
 # まとめ
 AngularからChart.jsを使う方法をまとめました。
-今回作ったコードは以下にあります。
+今回はLine Chartのコードを掲載しましたが、サンプルコードには「Bar Chart」「Pie Chart」「Sanky Chart」を掲載してます。
+ぜひ眺めてみてください。  
 
 https://stackblitz.com/edit/angular-ivy-7zu6jy?file=src/app/app.component.ts
