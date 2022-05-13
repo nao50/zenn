@@ -15,7 +15,15 @@ Angular には公式から [flex-layout](https://github.com/angular/flex-layout)
 また、本家に素晴らしい[demoページ](https://tburleson-layouts-demos.firebaseapp.com) があるのでそちらも参照ください。  
 例のごとく[stackblitz](https://stackblitz.com/edit/angular-flexlayouts-sample?file=src/app/app.component.ts)上にデモを作成しています。  
 
+ - 列と行が入れ子になった flex-layout の作り方
+ - スマートデバイス、PC等の画面サイズが異なる場合のレイアウトの作り方
+ - グリッドリストと flex-layout の組み合わせ方
+ 
 https://stackblitz.com/edit/angular-flexlayouts-sample?file=src/app/app.component.ts
 
 # Angular flex-layout
+例のごとく stackblitz 上に Demo を作成しています。
 
+
+
+https://stackblitz.com/edit/angular-flexlayouts-sample

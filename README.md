@@ -5,6 +5,7 @@
 # next article
 - [ ] angular x chartjs
 - [ ] angular x flexlayout
+- [ ] angular x electron
 - [ ] Authenticated Data eXperiment
 - [ ] angular x firebase x algolia x stripe x sendgrid x sentry x ga4
 - [ ] nestjs x prisma x planetscale

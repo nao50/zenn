@@ -3,7 +3,7 @@ title: "AngularでChart.jsを使う"
 emoji: "🅰️"
 type: "tech"
 topics: ["angular"]
-published: false
+published: true
 ---
 
 ![angular Chart.js](/images/angular-chartjs-01.png)
