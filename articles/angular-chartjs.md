@@ -1,5 +1,5 @@
 ---
-title: "AngularでChart.jsを使う"
+title: "AngularでChart.js v3を使う"
 emoji: "🅰️"
 type: "tech"
 topics: ["angular"]
