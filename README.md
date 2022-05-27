@@ -8,6 +8,7 @@
 - [ ] angular x electron
 - [ ] angular x cloudflare
 - [ ] angular x material design
+- [ ] studio
 - [ ] Authenticated Data eXperiment
 - [ ] angular x firebase x algolia x stripe x sendgrid x sentry x ga4
 - [ ] nestjs x prisma x planetscale
