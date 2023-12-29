@@ -3,7 +3,7 @@ title: "Angular17でCSR/SSR/SSGを組み合わせる"
 emoji: "🅰️"
 type: "tech"
 topics: ["angular", "typescript", "signals"]
-published: false
+published: true
 ---
 
 # はじめに
@@ -76,7 +76,6 @@ https://angular.dev/guide/prerendering
 
 `npm run build` すると `browser/ssg/index.html` というファイルができます。  
 以下のように専用のパスを作ってもアクセスできますが、従来のSSRのパスの `commonEngine.render()` 経由でも問題なく SSG されます。  
-チョットヨクワカラナイ...  
 
 ```ts: server.ts
 // 〜（略）〜
@@ -86,9 +85,10 @@ https://angular.dev/guide/prerendering
 // 〜（略）〜
 ```
 
+> commonEngine チョットヨクワカラナイ...  
 
 ## CSR / SSR の併用
-つまり **CSR したいパスへのリクエストに `browser/index.html` を返却** することで **SSR と CSR が共存** できそうです。
+CSR / SSR の併用は **CSR したいパスへのリクエストに `browser/index.html` を返却** することで **SSR と CSR が共存** できそうです。
 以下のように `server.ts` に `browser/index.html` を返却するパスを追加します。  
 
 ```ts: server.ts
@@ -110,7 +110,7 @@ https://angular.dev/guide/prerendering
 CSR と SSR 間のページ遷移を見てみましょう。  
 routerLink での遷移は `<router-outlet>` 内に表示するコンポーネントを差し替えます。  
 
-CSR 用の `browser/index.html` から SSR のパスへ routerLink で遷移すると`browser/index.html` のまま SSR の表示を行うため、実際にはClient Side Renderingとなります。  
+CSR 用の `browser/index.html` から SSR のパスへ routerLink で遷移すると`browser/index.html` のまま SSR 画面の表示を行うため、実際にはClient Side Renderingとなります。  
 
 | | 初期表示 | 初期表示 | 遷移方法 | 遷移後 | 遷移後ページ |
 | ---- | ---- | ---- | ---- | ---- | ---- |
@@ -120,11 +120,12 @@ CSR 用の `browser/index.html` から SSR のパスへ routerLink で遷移す�
 | ④ | SSR | server/index.server.html | href | CSR | browser/index.html |
 
 :::message
-[loadComponent](https://zenn.dev/lacolaco/books/angular-standalone-components/viewer/routing#%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89%E3%82%A2%E3%83%AD%E3%83%B3%E3%82%B3%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%8D%E3%83%B3%E3%83%88%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E3%83%AB%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0)でコンポーネントの遅延読み込みを行い、初期レンダリング時間を抑えることは可能ですが、CSR と SSR の共存の際には **SSR の目的に立ち返って**実装する必要はありそうです。  
+[loadComponent](https://zenn.dev/lacolaco/books/angular-standalone-components/viewer/routing#%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89%E3%82%A2%E3%83%AD%E3%83%B3%E3%82%B3%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%8D%E3%83%B3%E3%83%88%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E3%83%AB%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0)で遅延読み込みを行いレンダリング時間を抑えることができます。
+**SSR を利用する目的を明確にして** 設計する必要があります。  
 :::
 
 ## リクエストのキャッシュについて
-SSG ページであっても ngOnInit に Fetch 処理が書かれていると、せっかく build 時に prerendering したのにブラウザに表示されたから再び Fetch 処理が走ってしまいます。  
+SSG ページであっても ngOnInit に Fetch 処理が書かれていると、ブラウザに表示されてから再び Fetch 処理が走ってしまいます。  
 `TransferState` と `isPlatformServer` を利用することでサーバサイドのみで Fetch し、そのデータを保持することができます。  
 
 ```ts: ssg.component.ts
@@ -151,6 +152,7 @@ export class SsgComponent {
 
 また、Requestキャッシュについては別の記事を書きましたのでそちらをどうぞ。  
 
+https://zenn.dev/nao50/articles/angular17-interceptor
 
 # まとめ
 Angular17で CSR / SSR / SSG の併用についてまとめました。
