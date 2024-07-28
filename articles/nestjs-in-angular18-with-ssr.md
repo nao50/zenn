@@ -3,7 +3,7 @@ title: "Nestjs で @angular/ssr すると ES Module 周りでエラーが出る�
 emoji: "🦁"
 type: "tech"
 topics: ["nestjs", "angular", "typescript"]
-published: false
+published: true
 ---
 
 # はじめに
