@@ -3,17 +3,12 @@
 * [📘 How to use](https://zenn.dev/zenn/articles/zenn-cli-guide)
 
 # next article
-- [ ] angular x chartjs
-- [ ] angular x flexlayout
-- [ ] angular x electron
-- [ ] angular x cloudflare
-- [ ] angular x material design
-- [ ] studio
-- [ ] Authenticated Data eXperiment
-- [ ] angular x firebase x algolia x stripe x sendgrid x sentry x ga4
-- [ ] nestjs x prisma x planetscale
-- [ ] webauthn cli
-- [ ] radius
+- [ ] angular x hono ssr
+- [ ] angular x hono ssr x lambda webadapter
+- [ ] angular x tauri2
+
+- [ ] hono x prisma x planetscale
+- [ ] passkey cli (1password)
 
 # next book
 - [ ] angular forms cheatsheet x inventory control SaaS
