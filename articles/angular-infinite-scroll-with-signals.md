@@ -21,7 +21,7 @@ https://qiita.com/advent-calendar/2024/angular
 
 https://pokeapi.co/
 
-## 無限スクロールの追加読み込みの実装
+## 無限スクロールの追加読み込み実装
 ポケモンAPIからデータ取得を行います。
 画面遷移後も取得したデータを保持したいのでservice側のsignalsで状態管理します。
 
@@ -103,7 +103,7 @@ export class ItemComponent {
 }
 ```
 
-## 画面遷移後もスクロール位置を保持する実装
+## スクロール位置の復元実装
 無限スクロールでは画面遷移後にスクロール位置を復元したいことがあります。  
 これもservice側のsignalsで状態管理することで簡単に実現できます。  
 
@@ -116,7 +116,7 @@ export class ApiService {
 }
 ```
 
-コンポーネント側で以下のように`scrollY`を更新/復元することができます。   
+コンポーネント側で以下のように`scrollY`を更新/復元することができます。
 
 ```ts:timeline.component.ts
 @Component({
