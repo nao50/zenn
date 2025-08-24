@@ -3,7 +3,7 @@ title: "Angular20 を Hono で SSR する"
 emoji: "🔥"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["angular", "hono", "typescript", "javascript"]
-published: false
+published: true
 ---
 
 # はじめに
